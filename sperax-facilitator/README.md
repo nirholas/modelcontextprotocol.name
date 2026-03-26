@@ -13,7 +13,7 @@ https://x402.sperax.io
 MCP servers can gate tool access behind x402 payments. When an agent calls a paid tool:
 
 1. Server returns `402 Payment Required` with payment requirements
-2. Agent signs an EIP-712 authorization (EIP-3009 for USDC, EIP-2612 for USDs/SPA)
+2. Agent signs an EIP-712 authorization (EIP-3009 for USDC, EIP-2612 for USDs)
 3. Agent sends payment to the Sperax facilitator for verification and settlement
 4. Server grants access after confirmed settlement
 
@@ -30,7 +30,6 @@ MCP servers can gate tool access behind x402 payments. When an agent calls a pai
 |-------|-------|-------------------|
 | **USDC** | Base, Base Sepolia, Arbitrum, Ethereum | EIP-3009 `transferWithAuthorization` |
 | **USDs** | Arbitrum | EIP-2612 `permit` + `transferFrom` |
-| **SPA** | Arbitrum, Ethereum | EIP-2612 `permit` + `transferFrom` |
 
 ## Endpoints
 
