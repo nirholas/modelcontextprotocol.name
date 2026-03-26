@@ -1,0 +1,12 @@
+{
+  "name": "Sperax Facilitator",
+  "description": "x402 payment facilitator by SperaxOS. Enables MCP servers to accept gasless USDC, USDs, and SPA micropayments.",
+  "facilitatorUrl": "https://x402.sperax.io",
+  "networks": ["base", "base-sepolia", "arbitrum", "ethereum"],
+  "schemes": ["exact"],
+  "assets": ["USDC", "USDs", "SPA"],
+  "settlementSchemes": ["eip3009", "eip2612"],
+  "source": "https://github.com/Sperax/x402-facilitator",
+  "website": "https://sperax.io",
+  "app": "https://chat.sperax.io"
+}
