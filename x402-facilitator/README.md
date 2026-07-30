@@ -137,6 +137,10 @@ See [`.env.example`](.env.example) for all options. Required:
 - `FACILITATOR_PRIVATE_KEY` — 32-byte hex private key (the wallet that submits settlement transactions)
 - `BASE_RPC_URL` — RPC endpoint for Base (enabled by default)
 
+Optional:
+
+- `REDIS_URL`: when set, used-nonce records are kept in Redis instead of the in-process LRU cache, so multiple facilitator instances share replay protection. Without it the facilitator falls back to the in-memory store.
+
 The facilitator wallet needs ETH on each enabled chain to pay gas for `transferWithAuthorization` calls.
 
 ## Deployment
@@ -170,7 +174,7 @@ src/
 │   ├── facilitator.ts        # Orchestrates verify → settle flow
 │   ├── verifier.ts           # EIP-712 signature + requirements validation
 │   ├── settler.ts            # On-chain transferWithAuthorization
-│   └── nonce-store.ts        # LRU nonce dedup cache
+│   └── nonce-store.ts        # Nonce dedup store (in-memory LRU, or Redis when REDIS_URL is set)
 ├── config/
 │   ├── chains.ts             # Chain configs (Base, Arbitrum, Ethereum)
 │   ├── tokens.ts             # Token registry + EIP-712 domains
@@ -178,6 +182,7 @@ src/
 ├── routes/
 │   ├── verify.ts             # POST /verify
 │   ├── settle.ts             # POST /settle
+│   ├── supported.ts          # GET /supported
 │   ├── health.ts             # GET /health
 │   └── info.ts               # GET /info
 ├── middleware/

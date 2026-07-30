@@ -17,6 +17,7 @@
     "@hono/node-server": "^1.13.0",
     "@hono/zod-validator": "^0.7.6",
     "hono": "^4.6.0",
+    "ioredis": "^5.11.1",
     "lru-cache": "^11.2.7",
     "viem": "^2.21.0",
     "zod": "^3.23.0"

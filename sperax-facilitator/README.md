@@ -4,9 +4,12 @@ x402 payment facilitator by [SperaxOS](https://sperax.io) — enables MCP server
 
 ## Facilitator Endpoint
 
-```
-https://x402.sperax.io
-```
+The hosted endpoint at `x402.sperax.io` is offline while hosting is being migrated, so no public URL is published here yet. Run the facilitator yourself from source in the meantime:
+
+- [`../x402-facilitator/`](../x402-facilitator/) in this repository (setup instructions in its [README](../x402-facilitator/README.md))
+- [github.com/Sperax/x402-facilitator](https://github.com/Sperax/x402-facilitator)
+
+The endpoint table below describes the API that implementation serves.
 
 ## How It Works with MCP
 
