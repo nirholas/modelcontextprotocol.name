@@ -1,0 +1,23 @@
+# modelcontextprotocol.name
+
+> Give AI agents access to money 💰1,100+ MCP tools: swap, bridge, stake, lend, trade, and deploy across most blockchains. The open MCP gateway where AI meets DeFi. Trade crypto, swap across DEXs, bridge chains, stake tokens, lend, track whales, read market news, analyze smart contracts, pay other agents autonomously via x402.
+
+modelcontextprotocol.name is an open-source repository by nirholas, part of the three.ws ecosystem.
+
+## Docs
+
+- [README](https://github.com/nirholas/modelcontextprotocol.name/blob/HEAD/README.md): install, usage and reference
+- [Contents](https://github.com/nirholas/modelcontextprotocol.name/blob/HEAD/README.md#contents)
+- [License](https://github.com/nirholas/modelcontextprotocol.name/blob/HEAD/README.md#license)
+- [Documentation](https://github.com/nirholas/modelcontextprotocol.name/blob/HEAD/README.md#documentation)
+- [AGENTS.md](https://github.com/nirholas/modelcontextprotocol.name/blob/HEAD/AGENTS.md): guidance for coding agents
+- [Full text for LLMs](https://github.com/nirholas/modelcontextprotocol.name/blob/HEAD/llms-full.txt): the README inlined
+
+## Project
+
+- [Source](https://github.com/nirholas/modelcontextprotocol.name)
+- [Issues](https://github.com/nirholas/modelcontextprotocol.name/issues)
+- [Discussions](https://github.com/nirholas/modelcontextprotocol.name/discussions)
+- [Homepage](https://modelcontextprotocol.name)
+- [three.ws](https://three.ws): the platform this is part of
+- [All repositories by nirholas](https://github.com/nirholas/nirholas#readme)

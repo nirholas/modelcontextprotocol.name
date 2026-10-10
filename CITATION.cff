@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: "modelcontextprotocol.name"
+abstract: "Give AI agents access to money 💰1,100+ MCP tools: swap, bridge, stake, lend, trade, and deploy across most blockchains. The open MCP gateway where AI meets DeFi. Trade crypto, swap across DEXs, bridge chains, stake tokens, lend, track whales, read market news, analyze smart contracts, pay other agents autonomously via x402."
+repository-code: "https://github.com/nirholas/modelcontextprotocol.name"
+url: "https://three.ws"
+authors:
+  - name: three.ws
+    website: "https://three.ws"
