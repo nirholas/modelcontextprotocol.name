@@ -20,7 +20,7 @@
     "ioredis": "^5.11.1",
     "lru-cache": "^11.2.7",
     "viem": "^2.21.0",
-    "zod": "^3.23.0"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
