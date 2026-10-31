@@ -15,6 +15,7 @@ import type {
 } from '../types/index.js';
 import { ERC20_TRANSFER_WITH_AUTHORIZATION_ABI } from '../abi/erc20-permit.js';
 import { verifyPayment } from './verifier.js';
+import { checkRequirements } from './requirements.js';
 import { logger } from '../utils/logger.js';
 import { metrics } from '../utils/metrics.js';
 
@@ -83,11 +84,19 @@ export class Facilitator {
    */
   async verify(
     payment: X402Payment,
-    _requirements?: PaymentRequirements,
+    requirements?: PaymentRequirements,
   ): Promise<VerifyResponse> {
     const start = Date.now();
 
     try {
+      const mismatch = requirements ? checkRequirements(payment, requirements) : null;
+      if (mismatch) {
+        metrics.verifyRequests.inc({ valid: 'false' });
+        metrics.verifyLatency.observe(Date.now() - start);
+        logger.info({ reason: mismatch }, 'Payment does not satisfy requirements');
+        return { valid: false, isValid: false, invalidReason: mismatch };
+      }
+
       const result = await verifyPayment(payment);
 
       metrics.verifyRequests.inc({ valid: String(result.valid) });
